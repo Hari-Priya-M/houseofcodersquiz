@@ -1,0 +1,177 @@
+body{
+        font-size: 20px;
+        font-family: monospace;
+        background-image: url("img/bg.png");
+}
+
+#container{
+        margin : 50px auto;
+        background-color: whitesmoke;
+        height: 300px;
+        width : 700px;
+        border-radius: 5px;
+        box-shadow: 10px 10px 25px 10px;
+        position: relative;
+}
+#welcome{
+        font-size: 1.5em;
+        font-weight: bolder;
+        text-align: center;
+        color : white;
+}
+#message{
+
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        background: cadetblue;
+        color: black;
+        border: 1px solid orange;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+        /* Starting position */
+        -moz-transform:translateX(100%);
+        -webkit-transform:translateX(100%);
+        transform:translateX(100%);
+        /* Apply animation to this element */
+        -moz-animation: scroll-left 15s linear infinite;
+        -webkit-animation: scroll-left 15s linear infinite;
+        animation: scroll-left 15s linear infinite;
+    }
+    @-moz-keyframes scroll-left {
+        0%   { -moz-transform: translateX(100%); }
+        100% { -moz-transform: translateX(-100%); }
+    }
+    @-webkit-keyframes scroll-left {
+        0%   { -webkit-transform: translateX(100%); }
+        100% { -webkit-transform: translateX(-100%); }
+    }
+    @keyframes scroll-left {
+        0%   {
+            -moz-transform: translateX(100%); /* Browser bug fix */
+            -webkit-transform: translateX(100%); /* Browser bug fix */
+            transform: translateX(100%);
+        }
+        100% {
+            -moz-transform: translateX(-100%); /* Browser bug fix */
+            -webkit-transform: translateX(-100%); /* Browser bug fix */
+            transform: translateX(-100%);
+        }
+}
+
+
+#start{
+        font-size: 1.5em;
+        font-weight: bolder;
+        word-break: break-all;
+        font-style: inherit;
+        width:100px;
+        height:150px;
+        border : 2px solid lightseagreen;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        left:300px;
+        top:50px;
+        color : lightseagreen;
+}
+#start:hover{
+        border: 3px solid blanchedalmond;
+        color : blanchedalmond;
+}
+
+#questionImg{
+        width : 200px;
+        height : 200px;
+        position: absolute;
+        left : 0px;
+        top : 0px;
+}
+#questionImg img{
+        width : 200px;
+        height : 200px;
+        border-top-left-radius: 5px;
+}
+
+#question{
+        width:500px;
+        height : 125px;
+        position: absolute;
+        right:0;
+        top:0;
+}
+#question p{
+        margin : 0;
+        padding : 15px;
+        font-size: 1.25em;
+}
+
+#options{
+        width : 480px;
+        position: absolute;
+        right : 0;
+        top : 125px;
+        padding : 10px
+}
+.option{
+        display: inline-block;
+        width : 135px;
+        text-align: center;
+        border : 1px solid grey;
+        border-radius: 5px;
+        cursor: pointer;
+        padding : 5px;
+}
+.option:hover{
+        border : 2px solid grey;
+        font-weight: bold;
+}
+
+#progress{
+        width : 500px;
+        position: absolute;
+        bottom : 0px;
+        right : 0px;
+        padding:5px;
+        text-align: right;
+}
+.prog{
+        width : 25px;
+        height : 25px;
+        border: 1px solid #000;
+        display: inline-block;
+        border-radius: 50%;
+        margin-left : 5px;
+        margin-right : 5px;
+}
+#scoreContainer{
+        margin : 20px auto;
+        background-color: white;
+        opacity: 0.8;
+        height: 300px;
+        width : 700px;
+        border-radius: 5px;
+        box-shadow: 0px 5px 15px 0px;
+        position: relative;
+        display: none;
+}
+#scoreContainer img{
+        position: absolute;
+        top:100px;
+        left:325px;
+}
+#scoreContainer p{
+        position: absolute;
+        display: block;
+        width : 59px;
+        height :59px;
+        top:130px;
+        left:325px;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+}
